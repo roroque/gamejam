@@ -26,16 +26,11 @@ public class MissionBehaviour : MonoBehaviour {
 		if(!stopCounting){
 			var x = Time.deltaTime * speed;
 
-			if(currentDistance + x >= missionDistance){
-			
-				currentDistance = missionDistance;
-				Win();
 
-			}else{
 				
-				currentDistance += x;
+			currentDistance += x;
 
-			}
+
 
 
 
@@ -50,12 +45,6 @@ public class MissionBehaviour : MonoBehaviour {
 
 	}
 
-	public void Win(){
-		stopCounting = true;
-
-		canvasWin.SetActive(true);
-
-	}
 
 
 
