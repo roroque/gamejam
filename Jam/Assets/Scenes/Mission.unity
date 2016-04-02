@@ -164,28 +164,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11453106, guid: 41bbe9b6cee3e4e3a8cd7319ffac2467, type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 7c51e770aac834aa284d75691846d02f,
-        type: 3}
-    - target: {fileID: 11453106, guid: 41bbe9b6cee3e4e3a8cd7319ffac2467, type: 2}
-      propertyPath: m_PreserveAspect
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11491788, guid: 41bbe9b6cee3e4e3a8cd7319ffac2467, type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 52fbbf0a8813f4db6ad5e3bfd857fa7e,
-        type: 3}
-    - target: {fileID: 11491788, guid: 41bbe9b6cee3e4e3a8cd7319ffac2467, type: 2}
-      propertyPath: m_PreserveAspect
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 108068, guid: 41bbe9b6cee3e4e3a8cd7319ffac2467, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 41bbe9b6cee3e4e3a8cd7319ffac2467, type: 2}
   m_IsPrefabParent: 0

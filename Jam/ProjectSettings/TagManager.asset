@@ -6,6 +6,8 @@ TagManager:
   tags:
   - CanvasDeath
   - CanvasWin
+  - Background
+  - GameBehaviour
   layers:
   - Default
   - TransparentFX

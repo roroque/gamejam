@@ -1,6 +1,17 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameBehaviour.cs">
+    <Files>
+      <File FileName="Assets/Scripts/MissionBehaviour.cs" Line="117" Column="3" />
+      <File FileName="Assets/Scripts/GameBehaviour.cs" Line="41" Column="35" />
+      <File FileName="Assets/DistanceScoreScript.cs" Line="12" Column="53" />
+      <File FileName="Assets/KillScoreScript.cs" Line="12" Column="53" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+>>>>>>> 71a4f2597407df1e54baaf10bf98197717f02392
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
