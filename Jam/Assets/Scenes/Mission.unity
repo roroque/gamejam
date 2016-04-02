@@ -239,6 +239,33 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 41bbe9b6cee3e4e3a8cd7319ffac2467, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &169059765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 169059766}
+  m_Layer: 0
+  m_Name: CollisionCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &169059766
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 169059765}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.076, y: -0.008, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2096293802}
+  m_RootOrder: 1
 --- !u!1001 &173800862
 Prefab:
   m_ObjectHideFlags: 0
@@ -1289,6 +1316,7 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children:
   - {fileID: 1717332923}
+  - {fileID: 169059766}
   m_Father: {fileID: 0}
   m_RootOrder: 7
 --- !u!61 &2096293803
@@ -1342,6 +1370,9 @@ MonoBehaviour:
   currentWeapon: 0
   bullets:
   - {fileID: 1161079693}
+  m_WhatIsObject:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!212 &2096293806
 SpriteRenderer:
   m_ObjectHideFlags: 0

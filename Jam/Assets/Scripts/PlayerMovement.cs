@@ -24,11 +24,18 @@ public class PlayerMovement : MonoBehaviour {
 	[SerializeField] private int currentWeapon;
 	public GameObject[] bullets;
 
+	//Colisao caixas
+	[SerializeField] private LayerMask m_WhatIsObject; // A mask determining what is ground to the character
+	const float k_CollisionRadius = .2f; // Radius of the overlap circle to determine if grounded
+	private bool m_Collision;            // Whether or not the player is grounded.
+	private Transform m_CollisionCheck;    // A position marking where to check if the player is grounded.
+
+
 	private void Awake()
 	{
 		// Setting up references.
 		m_GroundCheck = transform.Find("GroundCheck");
-
+		m_CollisionCheck = transform.Find ("CollisionCheck");
 	}
 
 
@@ -48,6 +55,15 @@ public class PlayerMovement : MonoBehaviour {
 		{
 			if (colliders[i].gameObject != gameObject)
 				m_Grounded = true;
+		}
+
+		Collider2D[] collidersEnemy = Physics2D.OverlapCircleAll(m_CollisionCheck.position, k_CollisionRadius, m_WhatIsObject);
+		for (int i = 0; i < collidersEnemy.Length; i++)
+		{
+			if (collidersEnemy [i].gameObject != gameObject) {
+				m_Collision = true;
+				print ("BATEU!!!");
+			}
 		}
 
 		Move();
