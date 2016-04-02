@@ -49,14 +49,24 @@
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\MissionBehaviour.cs" />
      <Compile Include="Assets\Scripts\Paralax.cs" />
+<<<<<<< HEAD
      <Compile Include="Assets\Scripts\TouchController.cs" />
+=======
+<<<<<<< HEAD
+     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+=======
+>>>>>>> 5a846a2646933853b14c60f39165bcc9d5196a81
      <Compile Include="Assets\Scripts\spawner.cs" />
      <Compile Include="Assets\Scripts\spawnerKiller.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
+>>>>>>> 1886b1ba930492d18b5b203ea795b545fe5ebfe9
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
