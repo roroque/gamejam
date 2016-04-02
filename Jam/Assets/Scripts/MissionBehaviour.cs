@@ -1,14 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
+using UnityEngine.SocialPlatforms;
+using System.Runtime.InteropServices;
+using UnityEngine.SceneManagement;
+
 
 public class MissionBehaviour : MonoBehaviour {
 
-	public float missionDistance;
 	public GameObject canvasDeath;
-	public GameObject canvasWin;
 	public float currentDistance;
 	public float speed;
 	public bool stopCounting;
+	public float maxDistance;
+	public float kills;
+	public float maxkills;
+
 
 
 
@@ -18,6 +28,9 @@ public class MissionBehaviour : MonoBehaviour {
 	void Start () {
 		currentDistance = 0;
 		stopCounting = false;
+
+		load();
+
 	}
 	
 	// Update is called once per frame
@@ -26,11 +39,7 @@ public class MissionBehaviour : MonoBehaviour {
 		if(!stopCounting){
 			var x = Time.deltaTime * speed;
 
-
-				
 			currentDistance += x;
-
-
 
 
 
@@ -39,13 +48,86 @@ public class MissionBehaviour : MonoBehaviour {
 	}
 
 	public void GameOver(){
+
+		if(currentDistance > maxDistance){
+
+			maxDistance = currentDistance;
+
+		}
+		if(kills> maxkills){
+
+			maxkills = kills;
+
+		}
+
 		stopCounting = true;
 
 		canvasDeath.SetActive(true);
+
+		save();
+
+	}
+
+	public void IncrementKills(){
+
+
+		kills = kills + 1;
 
 	}
 
 
 
 
+
+	public void save(){
+
+		BinaryFormatter bf = new BinaryFormatter();
+		FileStream file = File.Create(Application.persistentDataPath + "/BadBarryData.dat");
+		Data data = new Data();
+
+
+		data.maxDistance = maxDistance;
+		data.maxkills = maxkills;
+	
+
+
+		bf.Serialize(file,data);
+		file.Close();
+		print("save");
+
+	}
+
+	public void load(){
+
+		//		File.Delete (Application.persistentDataPath + "/Jam.dat");
+
+		if(File.Exists(Application.persistentDataPath + "/Jam.dat")){
+			print("load");
+			BinaryFormatter bf = new BinaryFormatter();
+			FileStream file = File.Open(Application.persistentDataPath + "/Jam.dat",FileMode.Open);
+			Data data = (Data)bf.Deserialize(file);
+			file.Close();
+
+			maxDistance = data.maxDistance;
+			kills = data.maxkills;
+
+
+		}
+
+	}
+
+}
+
+
+
+
+[Serializable]
+class Data
+{
+
+	public float maxDistance;
+	public float maxkills;
+
+
+	
 }

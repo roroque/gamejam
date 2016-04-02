@@ -41,6 +41,8 @@ public class Enemy : MonoBehaviour {
 		if(health <= 0 && !dead){
 
 			dead = true;
+			GameObject.FindGameObjectWithTag("GameController").GetComponent<MissionBehaviour>().IncrementKills();
+
 			Die();
 
 
