@@ -3,8 +3,12 @@ using System.Collections;
 
 public class TouchController : MonoBehaviour {
 
+	PlayerMovement player;
+
 	// Use this for initialization
 	void Start () {
+
+		player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
 	
 	}
 	
@@ -15,12 +19,12 @@ public class TouchController : MonoBehaviour {
 
 			var mousePos = Input.mousePosition;
 			if(mousePos.x >= Screen.width/2){
-				print("right side of screen");
+
+				player.shoot();
 
 			}else{
 
-				print("left side of screen");
-
+				player.jump();
 
 			}
 				
@@ -32,10 +36,8 @@ public class TouchController : MonoBehaviour {
 			if (touch.phase == TouchPhase.Began) {
 
 				if (touch.position.x >= (Screen.width/2)) {
-					print("right side of screen");
 				}else{
 
-					print("left side of screen");
 
 				}
 			}

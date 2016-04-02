@@ -15,7 +15,7 @@ public class EndMission : MonoBehaviour {
 	
 	}
 	void OnTriggerEnter2D (Collider2D col){
-
+		print("perdeu");
 
 		if(col.tag == "Player"){
 			var x = GameObject.FindGameObjectWithTag("GameController").GetComponent<MissionBehaviour>();

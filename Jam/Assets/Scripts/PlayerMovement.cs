@@ -83,8 +83,10 @@ public class PlayerMovement : MonoBehaviour {
 
 	public void jump(){
 		//ver animacao do personagem andando e pulando
+		print("sera");
 		if (m_Grounded)
 		{
+			print("nao sei");
 			// Add a vertical force to the player.
 			m_Grounded = false;
 			body.AddForce(new Vector2(0f, m_JumpForce));
