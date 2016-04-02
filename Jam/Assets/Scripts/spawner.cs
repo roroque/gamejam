@@ -8,6 +8,7 @@ public class spawner : MonoBehaviour {
 	public float minTime;
 	public float maxTime;
 	public float nextTime;
+	public GameObject[] stuff;
 	public GameObject[] enemies;
 
 
@@ -38,7 +39,18 @@ public class spawner : MonoBehaviour {
 
 		if(!stop){
 			nextTime = Random.Range(minTime,maxTime);
-			var x = Instantiate(enemies[Random.Range(0,enemies.Length -1)],transform.position,transform.rotation);
+			var percentage = Random.Range(0,100);
+
+			if(percentage > 20){
+				
+				Instantiate(stuff[Random.Range(0,stuff.Length -1)],transform.position,transform.rotation);
+
+			}
+			else{
+				
+				Instantiate(stuff[Random.Range(0,stuff.Length -1)],transform.position,transform.rotation);
+
+			}
 		}
 
 
