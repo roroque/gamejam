@@ -45,18 +45,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Bullet.cs" />
      <Compile Include="Assets\Scripts\EndMission.cs" />
      <Compile Include="Assets\Scripts\MissionBehaviour.cs" />
      <Compile Include="Assets\Scripts\Paralax.cs" />
-<<<<<<< HEAD
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-=======
      <Compile Include="Assets\Scripts\spawner.cs" />
      <Compile Include="Assets\Scripts\spawnerKiller.cs" />
- <Reference Include="UnityEngine.UI">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
- </Reference>
->>>>>>> 1886b1ba930492d18b5b203ea795b545fe5ebfe9
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
