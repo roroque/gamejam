@@ -16,12 +16,23 @@ public class GameBehaviour : MonoBehaviour {
 	private bool loadingSound = false; //assegura que tocará um audio por vez
 
 
+
 	// Use this for initialization
 	void Start () {
 
 		DontDestroyOnLoad (gameObject);
 		DontDestroyOnLoad (this);
 
+		foreach (GameObject x in  GameObject.FindGameObjectsWithTag("GameBehaviour")) {
+
+			if (x != gameObject) {
+
+				Destroy (this.gameObject);
+
+			}
+
+
+		}
 		load();
 
 	}
@@ -75,7 +86,7 @@ public class GameBehaviour : MonoBehaviour {
 	public void save(){
 
 		BinaryFormatter bf = new BinaryFormatter();
-		FileStream file = File.Create(Application.persistentDataPath + "/BadBarryData.dat");
+		FileStream file = File.Create(Application.persistentDataPath + "/Jam.dat");
 		Data data = new Data();
 
 
