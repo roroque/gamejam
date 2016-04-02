@@ -83,7 +83,7 @@ public class MissionBehaviour : MonoBehaviour {
 
 		BinaryFormatter bf = new BinaryFormatter();
 		FileStream file = File.Create(Application.persistentDataPath + "/BadBarryData.dat");
-		Data data = new Data();
+		Datas data = new Datas();
 
 
 		data.maxDistance = maxDistance;
@@ -105,11 +105,11 @@ public class MissionBehaviour : MonoBehaviour {
 			print("load");
 			BinaryFormatter bf = new BinaryFormatter();
 			FileStream file = File.Open(Application.persistentDataPath + "/Jam.dat",FileMode.Open);
-			Data data = (Data)bf.Deserialize(file);
+			Datas data = (Datas)bf.Deserialize(file);
 			file.Close();
 
 			maxDistance = data.maxDistance;
-			kills = data.maxkills;
+			maxkills = data.maxkills;
 
 
 		}
@@ -122,7 +122,7 @@ public class MissionBehaviour : MonoBehaviour {
 
 
 [Serializable]
-class Data
+class Datas
 {
 
 	public float maxDistance;
