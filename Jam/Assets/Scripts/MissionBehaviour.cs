@@ -12,6 +12,7 @@ using UnityEngine.SceneManagement;
 public class MissionBehaviour : MonoBehaviour {
 
 	public GameObject canvasDeath;
+	public GameObject canvasPause;
 	public float currentDistance;
 	public float speed;
 	public bool stopCounting;
@@ -76,6 +77,25 @@ public class MissionBehaviour : MonoBehaviour {
 	}
 
 
+	public void Pause(){
+		if(!stopCounting){
+
+			if(Time.timeScale > 0){
+				canvasPause.SetActive(true);
+				Time.timeScale = 0;
+			}else{
+				canvasPause.SetActive(false);
+				Time.timeScale = 1;
+
+			}
+
+
+		}
+
+
+
+
+	}
 
 
 
