@@ -18,7 +18,7 @@ public class Paralax : MonoBehaviour {
 	}
 
 	public void Go (){
-		pos += speed;
+		pos += speed * Time.deltaTime;
 		if (pos > 1.0f)
 			pos -= 1.0f;
 
