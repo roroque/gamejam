@@ -30,7 +30,6 @@ public class AutoScroll : MonoBehaviour {
 				timer += Time.deltaTime;
 			} else {
 				timer = 0;
-				print (content.position.y);
 				if(content.position.y < 790.0005){
 					content.position = new Vector3 (transform.position.x, transform.position.y + distanceToScroll, transform.position.z);
 				}

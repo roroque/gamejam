@@ -13,6 +13,9 @@ public class GameBehaviour : MonoBehaviour {
 	public float maxkills;
 	public float maxdistance;
 
+	private bool loadingSound = false; //assegura que tocará um audio por vez
+
+
 	// Use this for initialization
 	void Start () {
 
@@ -20,38 +23,52 @@ public class GameBehaviour : MonoBehaviour {
 		DontDestroyOnLoad (this);
 
 		load();
-	
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-	
-	}
-
-
-	public void GoToMothership(){
-		
-		SceneManager.LoadScene("Mothership");
 
 	}
 
 
-	public void GoToLeaderbords(){
-		
-		SceneManager.LoadScene("Score");
+	public void GoToMothership(AudioSource audio){
+		if (!loadingSound) {
+			print ("go to Mothership");
+
+			loadingSound = true;
+			StartCoroutine (PlayAudio (audio, "Mothership"));
+		}
 
 	}
-	public void GoToCredits(){
 
-		SceneManager.LoadScene("Credits");
+
+	public void GoToLeaderbords(AudioSource audio){
+
+		if (!loadingSound) {
+			loadingSound = true;
+			StartCoroutine (PlayAudio (audio, "Score"));
+		}
+
+	}
+	public void GoToCredits(AudioSource audio){
+
+
+		if (!loadingSound) {
+			loadingSound = true;
+			StartCoroutine (PlayAudio (audio, "Credits"));
+		}
 
 
 	}
-	public void GoToLevel(){
-
-		SceneManager.LoadScene("Mission");
 
 
+	public void GoToLevel(AudioSource audio){
+
+		if (!loadingSound) {
+			loadingSound = true;
+			StartCoroutine (PlayAudio (audio, "Mission"));
+		}
 	}
 
 
@@ -92,19 +109,28 @@ public class GameBehaviour : MonoBehaviour {
 
 	}
 
+	//Inicia audio e troca de cena quando o audio acabar
+	IEnumerator PlayAudio(AudioSource currentAudio,string levelName){
+		currentAudio.PlayOneShot (currentAudio.clip);
+		print ("comeca a tocar " + currentAudio.clip.length);
+		yield return new WaitForSeconds (currentAudio.clip.length);
+		//yield return new WaitForSeconds (1);
+		loadingSound = false;
+
+		SceneManager.LoadScene(levelName);
+
+
+	}
+
 }
-
-
 
 
 [Serializable]
 class Data
 {
-
 	public float maxDistance;
 	public float maxkills;
 
-
-
 }
+
 
