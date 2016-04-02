@@ -543,7 +543,7 @@ Prefab:
     - target: {fileID: 11414948, guid: 4f4b4ca9c31f145bbaf7f760ecaca0e2, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 11423066, guid: 28de21113d27f46b2884fb79f9af27a8,
+      objectReference: {fileID: 11406226, guid: 65ce5a5067d81456692e53ee1fab8a9f,
         type: 2}
     - target: {fileID: 11414948, guid: 4f4b4ca9c31f145bbaf7f760ecaca0e2, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName

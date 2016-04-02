@@ -188,12 +188,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11423066, guid: 28de21113d27f46b2884fb79f9af27a8, type: 2}
+      - m_Target: {fileID: 11406226, guid: 65ce5a5067d81456692e53ee1fab8a9f, type: 2}
         m_MethodName: GoToLevel
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -430,12 +430,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11423066, guid: 28de21113d27f46b2884fb79f9af27a8, type: 2}
+      - m_Target: {fileID: 11406226, guid: 65ce5a5067d81456692e53ee1fab8a9f, type: 2}
         m_MethodName: GoToMothership
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
