@@ -16,9 +16,9 @@ public class Enemy : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
-		body.velocity = new Vector2(speed,0);
+		body.velocity = new Vector2(-speed * Time.deltaTime,0);
 	
 	}
 
@@ -27,6 +27,9 @@ public class Enemy : MonoBehaviour {
 
 		if(col.tag == "Player"){
 
+			print ("o player morreu");
+			var controller = GameObject.FindGameObjectWithTag ("GameController").GetComponent<MissionBehaviour> ();
+			controller.GameOver ();
 			//colocar animacao
 
 		}

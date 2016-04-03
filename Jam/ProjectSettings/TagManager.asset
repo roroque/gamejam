@@ -8,6 +8,7 @@ TagManager:
   - CanvasWin
   - Background
   - GameBehaviour
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -43,12 +43,12 @@ public class spawner : MonoBehaviour {
 
 			if(percentage > 20){
 				
-				Instantiate(stuff[Random.Range(0,stuff.Length -1)],transform.position,transform.rotation);
+				Instantiate(stuff[Random.Range(0,stuff.Length )],transform.position,transform.rotation);
 
 			}
 			else{
 				
-				Instantiate(stuff[Random.Range(0,stuff.Length -1)],transform.position,transform.rotation);
+				Instantiate(stuff[Random.Range(0,stuff.Length )],transform.position,transform.rotation);
 
 			}
 		}

@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\FindGameBehavioir.cs" />
      <Compile Include="Assets\Scripts\GameBehaviour.cs" />
+     <Compile Include="Assets\Scripts\InitMenu.cs" />
      <Compile Include="Assets\Scripts\MissionBehaviour.cs" />
      <Compile Include="Assets\Scripts\MuteController.cs" />
      <Compile Include="Assets\Scripts\Paralax.cs" />

@@ -8,8 +8,14 @@ public class DistanceScoreScript : MonoBehaviour {
 	void Start () {
 
 		var behave = GameObject.FindGameObjectWithTag("GameBehaviour").GetComponent<GameBehaviour>();
+		if (Application.loadedLevelName == "Mission") {
+			var mission = GameObject.FindGameObjectWithTag("GameController").GetComponent<MissionBehaviour>();
+			gameObject.GetComponent<Text> ().text = mission.currentDistance.ToString ();
 
-		gameObject.GetComponent<Text>().text = behave.maxdistance.ToString();
+		} else {
+			gameObject.GetComponent<Text> ().text = behave.maxdistance.ToString ();
+
+		}
 	
 	}
 	

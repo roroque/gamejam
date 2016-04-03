@@ -12,6 +12,7 @@ public class Bullet : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		body = gameObject.GetComponent<Rigidbody2D> ();
+		Destroy (gameObject, 5);
 	}
 	
 	// Update is called once per frame

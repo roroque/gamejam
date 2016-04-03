@@ -15,6 +15,12 @@ public class GameBehaviour : MonoBehaviour {
 
 	private bool loadingSound = false; //assegura que tocará um audio por vez
 
+	void Awake(){
+
+
+
+
+	}
 
 
 	// Use this for initialization
@@ -23,16 +29,7 @@ public class GameBehaviour : MonoBehaviour {
 		DontDestroyOnLoad (gameObject);
 		DontDestroyOnLoad (this);
 
-		foreach (GameObject x in  GameObject.FindGameObjectsWithTag("GameBehaviour")) {
 
-			if (x != gameObject) {
-
-				Destroy (this.gameObject);
-
-			}
-
-
-		}
 		load();
 
 	}
@@ -44,9 +41,11 @@ public class GameBehaviour : MonoBehaviour {
 
 
 	public void GoToMothership(AudioSource audio){
-		if (!loadingSound) {
-			print ("go to Mothership");
 
+		SceneManager.LoadScene("Mothership");
+
+
+		if (!loadingSound) {
 			loadingSound = true;
 			StartCoroutine (PlayAudio (audio, "Mothership"));
 		}
@@ -56,19 +55,23 @@ public class GameBehaviour : MonoBehaviour {
 
 	public void GoToLeaderbords(AudioSource audio){
 
-		if (!loadingSound) {
-			loadingSound = true;
-			StartCoroutine (PlayAudio (audio, "Score"));
-		}
+		SceneManager.LoadScene("Score");
+
+//		if (!loadingSound) {
+//			loadingSound = true;
+//			StartCoroutine (PlayAudio (audio, "Score"));
+//		}
 
 	}
 	public void GoToCredits(AudioSource audio){
 
+		SceneManager.LoadScene("Credits");
 
-		if (!loadingSound) {
-			loadingSound = true;
-			StartCoroutine (PlayAudio (audio, "Credits"));
-		}
+
+//		if (!loadingSound) {
+//			loadingSound = true;
+//			StartCoroutine (PlayAudio (audio, "Credits"));
+//		}
 
 
 	}
@@ -76,10 +79,14 @@ public class GameBehaviour : MonoBehaviour {
 
 	public void GoToLevel(AudioSource audio){
 
-		if (!loadingSound) {
-			loadingSound = true;
-			StartCoroutine (PlayAudio (audio, "Mission"));
-		}
+		SceneManager.LoadScene("Mission");
+
+
+//		if (!loadingSound) {
+//			loadingSound = true;
+//			StartCoroutine (PlayAudio (audio, "Mission"));
+//		}
+
 	}
 
 

@@ -29,6 +29,7 @@ public class MissionBehaviour : MonoBehaviour {
 	void Start () {
 		currentDistance = 0;
 		stopCounting = false;
+		Time.timeScale = 1;
 
 		load();
 
@@ -67,6 +68,12 @@ public class MissionBehaviour : MonoBehaviour {
 
 		save();
 
+
+		var behave = GameObject.FindGameObjectWithTag ("GameBehaviour").GetComponent<GameBehaviour> ();
+		behave.maxkills = maxkills;
+		behave.maxdistance = maxDistance;
+		behave.save ();
+
 	}
 
 	public void IncrementKills(){
@@ -102,7 +109,7 @@ public class MissionBehaviour : MonoBehaviour {
 	public void save(){
 
 		BinaryFormatter bf = new BinaryFormatter();
-		FileStream file = File.Create(Application.persistentDataPath + "/BadBarryData.dat");
+		FileStream file = File.Create(Application.persistentDataPath + "/Jam.dat");
 		Datas data = new Datas();
 
 

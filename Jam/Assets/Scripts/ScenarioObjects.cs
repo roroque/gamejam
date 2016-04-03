@@ -15,7 +15,7 @@ public class ScenarioObjects : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		body.velocity = new Vector2(speed * Time.deltaTime,0);
+		body.velocity = new Vector2(-speed * Time.deltaTime,0);
 	
 	}
 }

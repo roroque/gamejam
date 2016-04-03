@@ -6,10 +6,15 @@ public class KillScoreScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
 		var behave = GameObject.FindGameObjectWithTag("GameBehaviour").GetComponent<GameBehaviour>();
+		if (Application.loadedLevelName == "Mission") {
+			var mission = GameObject.FindGameObjectWithTag("GameController").GetComponent<MissionBehaviour>();
+			gameObject.GetComponent<Text> ().text = mission.kills.ToString ();
 
-		gameObject.GetComponent<Text>().text = behave.maxkills.ToString();
+		} else {
+			gameObject.GetComponent<Text> ().text = behave.maxkills.ToString ();
+
+		}
 	
 	}
 	
