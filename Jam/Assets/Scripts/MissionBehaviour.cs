@@ -51,8 +51,9 @@ public class MissionBehaviour : MonoBehaviour {
 
 	public void GameOver(){
 
-		if(currentDistance > maxDistance){
+		Time.timeScale = 0;
 
+		if(currentDistance > maxDistance){
 			maxDistance = currentDistance;
 
 		}

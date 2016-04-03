@@ -40,15 +40,16 @@ public class spawner : MonoBehaviour {
 		if(!stop){
 			nextTime = Random.Range(minTime,maxTime);
 			var percentage = Random.Range(0,100);
+			print(percentage);
 
-			if(percentage > 20){
+			if(percentage > 50){
 				
 				Instantiate(stuff[Random.Range(0,stuff.Length )],transform.position,transform.rotation);
 
 			}
 			else{
 				
-				Instantiate(stuff[Random.Range(0,stuff.Length )],transform.position,transform.rotation);
+				Instantiate(enemies[Random.Range(0,enemies.Length )],transform.position,transform.rotation);
 
 			}
 		}
