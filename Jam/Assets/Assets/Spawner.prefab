@@ -48,7 +48,8 @@ MonoBehaviour:
   - {fileID: 176210, guid: e469c0acc94db40d78272519f1048c96, type: 2}
   - {fileID: 165932, guid: 4f795bcac370c4846b594cdb2497617d, type: 2}
   - {fileID: 142498, guid: 632ebab3504f0448a904a0f6c06bab25, type: 2}
-  enemies: []
+  enemies:
+  - {fileID: 132000, guid: f01176074cc1c474dbfe9c4aa0da89de, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

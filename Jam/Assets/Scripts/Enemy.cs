@@ -57,7 +57,8 @@ public class Enemy : MonoBehaviour {
 	public void Die(){
 
 		//realizar animacao de morte que seria destruir o colllider desse cara aqui
-		Destroy(gameObject.GetComponent<Collider2D>());
+		Destroy(gameObject);
+
 	
 
 
